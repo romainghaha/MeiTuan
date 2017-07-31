@@ -8,8 +8,12 @@
 
 #import "SUShopVC.h"
 #import "SUFooDVC.h"
+#import "SUShopComVC.h"
+#import "SUShopOrdVC.h"
+#import "SUShopInforVC.h"
 
-@interface SUShopVC ()
+
+@interface SUShopVC ()<UIScrollViewDelegate>
 
 //头部缩放视图
 @property(nonatomic,strong)UIView *shopHeadView;
@@ -17,6 +21,8 @@
 @property(nonatomic,strong)UIBarButtonItem *rightItem;
 //商家索引视图
 @property(nonatomic,strong)UIView *shopTagView;
+//小索引条
+@property(nonatomic,weak)UIView *smallTagView;
 
 @end
 
@@ -93,6 +99,9 @@
         make.width.offset(50);
         make.centerX.equalTo(btnArr[0]).offset(0);
     }];
+    //属性赋值
+    _smallTagView = smallTagView;
+    
 
 }
 #pragma mark - 标签按钮
@@ -101,7 +110,7 @@
     UIButton *btn = [[UIButton alloc] init];
     [btn setTitle:title forState:UIControlStateNormal];
     [btn setTitleColor:[UIColor darkGrayColor] forState:UIControlStateNormal];
-    [btn setBackgroundColor:[UIColor lightGrayColor]];
+    [btn setBackgroundColor:[UIColor whiteColor]];
     return btn;
 }
 #pragma mark -创建滚动视图
@@ -109,15 +118,62 @@
 {
     //创建滚动视图
     UIScrollView *shopScrollView = [[UIScrollView alloc] init];
-    shopScrollView.backgroundColor = [UIColor cyanColor];
+    shopScrollView.backgroundColor = [UIColor grayColor];
     [self.view addSubview:shopScrollView];
+    shopScrollView.pagingEnabled = YES;
+    //关闭滚动条及弹性效果
+    shopScrollView.showsVerticalScrollIndicator = NO;
+    shopScrollView.showsHorizontalScrollIndicator = NO;
+    shopScrollView.bounces = NO;
     //约束
     [shopScrollView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.right.bottom.offset(0);
         make.top.equalTo(_shopTagView.mas_bottom).offset(0);
     }];
+    //商家点餐,评论,信息控制器创建
+    SUShopComVC *comment = [[SUShopComVC alloc] init];
+    SUShopOrdVC *order = [[SUShopOrdVC alloc] init];
+    SUShopInforVC *infor = [[SUShopInforVC alloc] init];
+    NSArray *vcArr = @[order,comment,infor];
+    //添加到滚动视图
+    for(UIViewController *vc in vcArr)
+    {
+        //添加视图
+        [shopScrollView addSubview:vc.view];
+        //建立父子关系
+        [self addChildViewController:vc];
+        //告知已建立关系
+        [vc didMoveToParentViewController:self];
+    }
+    //约束
+    [shopScrollView.subviews mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.bottom.offset(0);
+        make.height.width.equalTo(shopScrollView);
+    }];
+    [shopScrollView.subviews mas_distributeViewsAlongAxis:MASAxisTypeHorizontal withFixedSpacing:0 leadSpacing:0 tailSpacing:0];
+    //指定代理
+    shopScrollView.delegate = self;
 }
-
+#pragma mark - 滚动代理方法
+-(void)scrollViewDidScroll:(UIScrollView *)scrollView
+{
+    //滚动页数
+    CGFloat page = scrollView.contentOffset.x/scrollView.bounds.size.width;
+    //小索引滚动距离
+    _smallTagView.transform = CGAffineTransformMakeTranslation((_shopTagView.bounds.size.width/3.0) * page, 0);
+}
+-(void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView
+{
+    NSInteger page = scrollView.contentOffset.x/scrollView.bounds.size.width;
+    UIButton *btn = _shopTagView.subviews[page];
+    if(page == _shopTagView.subviews.count-1)
+    {
+        btn.titleLabel.font = [UIFont boldSystemFontOfSize:18];
+    }else
+    {
+        btn.titleLabel.font = [UIFont systemFontOfSize:18];
+    }
+}
 #pragma mark - 导航栏设置
 -(void)setUpNav
 {
