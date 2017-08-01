@@ -11,6 +11,13 @@
 		4F5FA6291F2F5E7F0026C292 /* SUShopComVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F5FA6281F2F5E7F0026C292 /* SUShopComVC.m */; };
 		4F5FA62C1F2F5E9C0026C292 /* SUShopOrdVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F5FA62B1F2F5E9C0026C292 /* SUShopOrdVC.m */; };
 		4F5FA62F1F2F5EBB0026C292 /* SUShopInforVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F5FA62E1F2F5EBB0026C292 /* SUShopInforVC.m */; };
+		4F5FA6321F3069C40026C292 /* SUShopHeadView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F5FA6311F3069C40026C292 /* SUShopHeadView.m */; };
+		4F5FA6351F3072B70026C292 /* SUShopModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F5FA6341F3072B70026C292 /* SUShopModel.m */; };
+		4F5FA6371F3074AB0026C292 /* food.json in Resources */ = {isa = PBXBuildFile; fileRef = 4F5FA6361F3074AB0026C292 /* food.json */; };
+		4F5FA63D1F307BB00026C292 /* UIImage+DashLine.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F5FA63C1F307BB00026C292 /* UIImage+DashLine.m */; };
+		4F5FA6401F308D0C0026C292 /* SUDiscoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F5FA63F1F308D0C0026C292 /* SUDiscoModel.m */; };
+		4F5FA6431F30A64A0026C292 /* SULoopView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F5FA6421F30A64A0026C292 /* SULoopView.m */; };
+		4F5FA6461F30A6F70026C292 /* SUInforView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F5FA6451F30A6F70026C292 /* SUInforView.m */; };
 		4F9E794B1F2DF4C600B2DA46 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F9E794A1F2DF4C600B2DA46 /* main.m */; };
 		4F9E79561F2DF4C600B2DA46 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4F9E79551F2DF4C600B2DA46 /* Assets.xcassets */; };
 		4F9E79591F2DF4C600B2DA46 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4F9E79571F2DF4C600B2DA46 /* LaunchScreen.storyboard */; };
@@ -76,6 +83,19 @@
 		4F5FA62B1F2F5E9C0026C292 /* SUShopOrdVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SUShopOrdVC.m; sourceTree = "<group>"; };
 		4F5FA62D1F2F5EBB0026C292 /* SUShopInforVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SUShopInforVC.h; sourceTree = "<group>"; };
 		4F5FA62E1F2F5EBB0026C292 /* SUShopInforVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SUShopInforVC.m; sourceTree = "<group>"; };
+		4F5FA6301F3069C40026C292 /* SUShopHeadView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SUShopHeadView.h; sourceTree = "<group>"; };
+		4F5FA6311F3069C40026C292 /* SUShopHeadView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SUShopHeadView.m; sourceTree = "<group>"; };
+		4F5FA6331F3072B70026C292 /* SUShopModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SUShopModel.h; sourceTree = "<group>"; };
+		4F5FA6341F3072B70026C292 /* SUShopModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SUShopModel.m; sourceTree = "<group>"; };
+		4F5FA6361F3074AB0026C292 /* food.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = food.json; sourceTree = "<group>"; };
+		4F5FA63B1F307BB00026C292 /* UIImage+DashLine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+DashLine.h"; sourceTree = "<group>"; };
+		4F5FA63C1F307BB00026C292 /* UIImage+DashLine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+DashLine.m"; sourceTree = "<group>"; };
+		4F5FA63E1F308D0C0026C292 /* SUDiscoModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SUDiscoModel.h; sourceTree = "<group>"; };
+		4F5FA63F1F308D0C0026C292 /* SUDiscoModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SUDiscoModel.m; sourceTree = "<group>"; };
+		4F5FA6411F30A64A0026C292 /* SULoopView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SULoopView.h; sourceTree = "<group>"; };
+		4F5FA6421F30A64A0026C292 /* SULoopView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SULoopView.m; sourceTree = "<group>"; };
+		4F5FA6441F30A6F70026C292 /* SUInforView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SUInforView.h; sourceTree = "<group>"; };
+		4F5FA6451F30A6F70026C292 /* SUInforView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SUInforView.m; sourceTree = "<group>"; };
 		4F9E79461F2DF4C600B2DA46 /* MeiTuanPro.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MeiTuanPro.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4F9E794A1F2DF4C600B2DA46 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		4F9E79551F2DF4C600B2DA46 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -295,6 +315,10 @@
 		4F5FA6211F2F5E140026C292 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				4F5FA6331F3072B70026C292 /* SUShopModel.h */,
+				4F5FA6341F3072B70026C292 /* SUShopModel.m */,
+				4F5FA63E1F308D0C0026C292 /* SUDiscoModel.h */,
+				4F5FA63F1F308D0C0026C292 /* SUDiscoModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -302,6 +326,12 @@
 		4F5FA6221F2F5E140026C292 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				4F5FA6301F3069C40026C292 /* SUShopHeadView.h */,
+				4F5FA6311F3069C40026C292 /* SUShopHeadView.m */,
+				4F5FA6411F30A64A0026C292 /* SULoopView.h */,
+				4F5FA6421F30A64A0026C292 /* SULoopView.m */,
+				4F5FA6441F30A6F70026C292 /* SUInforView.h */,
+				4F5FA6451F30A6F70026C292 /* SUInforView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -348,6 +378,7 @@
 		4F9E79491F2DF4C600B2DA46 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				4F5FA6361F3074AB0026C292 /* food.json */,
 				4F9E79551F2DF4C600B2DA46 /* Assets.xcassets */,
 				4F9E79571F2DF4C600B2DA46 /* LaunchScreen.storyboard */,
 				4F9E795A1F2DF4C600B2DA46 /* Info.plist */,
@@ -372,6 +403,8 @@
 				4F9E79FB1F2E1B6C00B2DA46 /* NSObject+SULinearFunction.h */,
 				4F9E79FC1F2E1B6C00B2DA46 /* NSObject+SULinearFunction.m */,
 				4F9E79FE1F2E21D900B2DA46 /* additon.h */,
+				4F5FA63B1F307BB00026C292 /* UIImage+DashLine.h */,
+				4F5FA63C1F307BB00026C292 /* UIImage+DashLine.m */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -619,6 +652,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4F5FA6371F3074AB0026C292 /* food.json in Resources */,
 				4F9E79591F2DF4C600B2DA46 /* LaunchScreen.storyboard in Resources */,
 				4F9E79561F2DF4C600B2DA46 /* Assets.xcassets in Resources */,
 			);
@@ -654,20 +688,26 @@
 				4F5FA62F1F2F5EBB0026C292 /* SUShopInforVC.m in Sources */,
 				4F9E79D11F2DF6D600B2DA46 /* MASLayoutConstraint.m in Sources */,
 				4F9E79DB1F2DF6D600B2DA46 /* SDImageCache.m in Sources */,
+				4F5FA6461F30A6F70026C292 /* SUInforView.m in Sources */,
 				4F9E79E91F2DF6D600B2DA46 /* UIView+WebCache.m in Sources */,
+				4F5FA63D1F307BB00026C292 /* UIImage+DashLine.m in Sources */,
 				4F5FA62C1F2F5E9C0026C292 /* SUShopOrdVC.m in Sources */,
 				4F9E79CF1F2DF6D600B2DA46 /* MASConstraint.m in Sources */,
 				4F9E79F41F2DFAED00B2DA46 /* SUBaseVC.m in Sources */,
 				4F9E79E41F2DF6D600B2DA46 /* UIImage+GIF.m in Sources */,
+				4F5FA6351F3072B70026C292 /* SUShopModel.m in Sources */,
 				4F9E79DA1F2DF6D600B2DA46 /* NSImage+WebCache.m in Sources */,
 				4F9E79D51F2DF6D600B2DA46 /* NSLayoutConstraint+MASDebugAdditions.m in Sources */,
 				4F9E79E51F2DF6D600B2DA46 /* UIImage+MultiFormat.m in Sources */,
 				4F9E79DE1F2DF6D600B2DA46 /* SDWebImageDecoder.m in Sources */,
+				4F5FA6401F308D0C0026C292 /* SUDiscoModel.m in Sources */,
 				4F9E79CE1F2DF6D600B2DA46 /* MASCompositeConstraint.m in Sources */,
 				4F9E79D91F2DF6D600B2DA46 /* NSData+ImageContentType.m in Sources */,
 				4F9E79E01F2DF6D600B2DA46 /* SDWebImageDownloaderOperation.m in Sources */,
 				4F9E79CB1F2DF6D600B2DA46 /* AFURLRequestSerialization.m in Sources */,
+				4F5FA6431F30A64A0026C292 /* SULoopView.m in Sources */,
 				4F9E79DC1F2DF6D600B2DA46 /* SDImageCacheConfig.m in Sources */,
+				4F5FA6321F3069C40026C292 /* SUShopHeadView.m in Sources */,
 				4F5FA6261F2F5E140026C292 /* SUShopVC.m in Sources */,
 				4F9E79C91F2DF6D600B2DA46 /* AFNetworkReachabilityManager.m in Sources */,
 				4F9E79FD1F2E1B6C00B2DA46 /* NSObject+SULinearFunction.m in Sources */,

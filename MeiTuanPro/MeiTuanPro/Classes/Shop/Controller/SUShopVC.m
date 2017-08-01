@@ -11,7 +11,8 @@
 #import "SUShopComVC.h"
 #import "SUShopOrdVC.h"
 #import "SUShopInforVC.h"
-
+#import "SUShopHeadView.h"
+#import "SUShopModel.h"
 
 @interface SUShopVC ()<UIScrollViewDelegate>
 
@@ -25,12 +26,17 @@
 @property(nonatomic,weak)UIView *smallTagView;
 //滚动视图
 @property(nonatomic,weak)UIScrollView *shopScrollView;
+//模型数据
+@property(nonatomic,strong)SUShopModel *modelData;
 @end
 
 @implementation SUShopVC
 
-- (void)viewDidLoad {
-    
+- (void)viewDidLoad
+{
+    //加载数据
+    [self loadShopData];
+    //设置界面
     [self setUpUI];
     
     [super viewDidLoad];
@@ -208,8 +214,8 @@
 -(void)setUpHeaderView
 {
     //创建头部视图
-    UIView *shopHeadView = [[UIView alloc] init];
-    shopHeadView.backgroundColor = [UIColor cyanColor];
+    SUShopHeadView *shopHeadView = [[SUShopHeadView alloc] init];
+    shopHeadView.backgroundColor = [UIColor grayColor];
     [self.view addSubview:shopHeadView];
     
     [shopHeadView mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -217,7 +223,8 @@
         make.height.offset(180);
     }];
     _shopHeadView = shopHeadView;
-    
+    //传入数据
+    shopHeadView.shopDataModel = _modelData;
     //添加右侧按钮
     UIBarButtonItem *rightItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"btn_share"] style:UIBarButtonItemStylePlain target:nil action:nil];
     self.navBar.tintColor = [UIColor whiteColor];
@@ -282,21 +289,23 @@
 //    [self.navigationController pushViewController:fVC animated:YES];
 //}
 
-
+-(void)loadShopData
+{
+    //加载json
+    NSData *data = [NSData dataWithContentsOfURL:[[NSBundle mainBundle] URLForResource:@"food.json" withExtension:nil]];
+    //把json文件转换成字典
+    NSDictionary *jsonDic = [NSJSONSerialization JSONObjectWithData:data options:0 error:nil];
+    //获取自己想要的数据
+    NSDictionary *poi_dict = jsonDic[@"data"][@"poi_info"];
+    //字典转模型
+    SUShopModel *modelData = [SUShopModel makeShopModelWithDic:poi_dict];
+    //给属性赋值
+    _modelData = modelData;
+}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end
