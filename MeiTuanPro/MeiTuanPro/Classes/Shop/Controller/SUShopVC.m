@@ -23,7 +23,8 @@
 @property(nonatomic,strong)UIView *shopTagView;
 //小索引条
 @property(nonatomic,weak)UIView *smallTagView;
-
+//滚动视图
+@property(nonatomic,weak)UIScrollView *shopScrollView;
 @end
 
 @implementation SUShopVC
@@ -76,10 +77,11 @@
     UIButton *btn2 = [self makeTagBtnWithTitle:@"评价"];
     UIButton *btn3 = [self makeTagBtnWithTitle:@"商品"];
     NSArray *btnArr = @[btn1,btn2,btn3];
-    
-    [_shopTagView addSubview:btn1];
-    [_shopTagView addSubview:btn2];
-    [_shopTagView addSubview:btn3];
+    //默认在第一个btn
+    btn1.titleLabel.font = [UIFont boldSystemFontOfSize:18];
+//    [_shopTagView addSubview:btn1];
+//    [_shopTagView addSubview:btn2];
+//    [_shopTagView addSubview:btn3];
     
     [_shopTagView.subviews mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.bottom.offset(0);
@@ -111,7 +113,15 @@
     [btn setTitle:title forState:UIControlStateNormal];
     [btn setTitleColor:[UIColor darkGrayColor] forState:UIControlStateNormal];
     [btn setBackgroundColor:[UIColor whiteColor]];
+    [_shopTagView addSubview:btn];
+    [btn addTarget:self action:@selector(btnClick:) forControlEvents:UIControlEventTouchUpInside];
+    btn.tag = _shopTagView.subviews.count-1;
     return btn;
+}
+#pragma mark - 按钮点击事件
+-(void)btnClick:(UIButton *)btn
+{
+    [_shopScrollView setContentOffset:CGPointMake(btn.tag*_shopScrollView.bounds.size.width, 0) animated:YES];
 }
 #pragma mark -创建滚动视图
 -(void)setUpShopScrollView
@@ -153,6 +163,8 @@
     [shopScrollView.subviews mas_distributeViewsAlongAxis:MASAxisTypeHorizontal withFixedSpacing:0 leadSpacing:0 tailSpacing:0];
     //指定代理
     shopScrollView.delegate = self;
+    //给属性赋值
+    _shopScrollView = shopScrollView;
 }
 #pragma mark - 滚动代理方法
 -(void)scrollViewDidScroll:(UIScrollView *)scrollView
@@ -165,14 +177,23 @@
 -(void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView
 {
     NSInteger page = scrollView.contentOffset.x/scrollView.bounds.size.width;
-    UIButton *btn = _shopTagView.subviews[page];
-    if(page == _shopTagView.subviews.count-1)
+    
+    for(NSInteger i = 0; i < _shopTagView.subviews.count-1; i++)
     {
-        btn.titleLabel.font = [UIFont boldSystemFontOfSize:18];
-    }else
-    {
-        btn.titleLabel.font = [UIFont systemFontOfSize:18];
+        UIButton *btn = _shopTagView.subviews[i];
+        if(page == i)
+            {
+                btn.titleLabel.font = [UIFont boldSystemFontOfSize:18];
+            }
+        else
+            {
+                btn.titleLabel.font = [UIFont systemFontOfSize:18];
+            }
     }
+}
+-(void)scrollViewDidEndScrollingAnimation:(UIScrollView *)scrollView
+{
+    [self scrollViewDidEndDecelerating:scrollView];
 }
 #pragma mark - 导航栏设置
 -(void)setUpNav
