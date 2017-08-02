@@ -20,6 +20,7 @@
 		4F5FA6461F30A6F70026C292 /* SUInforView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F5FA6451F30A6F70026C292 /* SUInforView.m */; };
 		4F5FA64A1F3166C20026C292 /* SUShopDetailVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F5FA6491F3166C20026C292 /* SUShopDetailVC.m */; };
 		4F5FA64D1F31865B0026C292 /* UIView+Addition.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F5FA64C1F31865B0026C292 /* UIView+Addition.m */; };
+		4F5FA6531F32208A0026C292 /* SUShopDetailAnimator.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F5FA6521F32208A0026C292 /* SUShopDetailAnimator.m */; };
 		4F9E794B1F2DF4C600B2DA46 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F9E794A1F2DF4C600B2DA46 /* main.m */; };
 		4F9E79561F2DF4C600B2DA46 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4F9E79551F2DF4C600B2DA46 /* Assets.xcassets */; };
 		4F9E79591F2DF4C600B2DA46 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4F9E79571F2DF4C600B2DA46 /* LaunchScreen.storyboard */; };
@@ -102,6 +103,8 @@
 		4F5FA6491F3166C20026C292 /* SUShopDetailVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SUShopDetailVC.m; sourceTree = "<group>"; };
 		4F5FA64B1F31865B0026C292 /* UIView+Addition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Addition.h"; sourceTree = "<group>"; };
 		4F5FA64C1F31865B0026C292 /* UIView+Addition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Addition.m"; sourceTree = "<group>"; };
+		4F5FA6511F32208A0026C292 /* SUShopDetailAnimator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SUShopDetailAnimator.h; sourceTree = "<group>"; };
+		4F5FA6521F32208A0026C292 /* SUShopDetailAnimator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SUShopDetailAnimator.m; sourceTree = "<group>"; };
 		4F9E79461F2DF4C600B2DA46 /* MeiTuanPro.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MeiTuanPro.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4F9E794A1F2DF4C600B2DA46 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		4F9E79551F2DF4C600B2DA46 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -356,6 +359,8 @@
 			children = (
 				4F5FA6481F3166C20026C292 /* SUShopDetailVC.h */,
 				4F5FA6491F3166C20026C292 /* SUShopDetailVC.m */,
+				4F5FA6511F32208A0026C292 /* SUShopDetailAnimator.h */,
+				4F5FA6521F32208A0026C292 /* SUShopDetailAnimator.m */,
 			);
 			path = ShopDetail;
 			sourceTree = "<group>";
@@ -709,6 +714,7 @@
 				4F5FA64D1F31865B0026C292 /* UIView+Addition.m in Sources */,
 				4F9E79DB1F2DF6D600B2DA46 /* SDImageCache.m in Sources */,
 				4F5FA6461F30A6F70026C292 /* SUInforView.m in Sources */,
+				4F5FA6531F32208A0026C292 /* SUShopDetailAnimator.m in Sources */,
 				4F9E79E91F2DF6D600B2DA46 /* UIView+WebCache.m in Sources */,
 				4F5FA63D1F307BB00026C292 /* UIImage+DashLine.m in Sources */,
 				4F5FA62C1F2F5E9C0026C292 /* SUShopOrdVC.m in Sources */,

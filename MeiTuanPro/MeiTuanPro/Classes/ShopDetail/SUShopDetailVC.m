@@ -47,8 +47,11 @@
     //创建背景视图
     UIImageView *bgImageView = [[UIImageView alloc] init];
     [bgImageView sd_setImageWithURL:[NSURL URLWithString:[_shopDataModel.poi_back_pic_url stringByDeletingPathExtension]]];
-    bgImageView.userInteractionEnabled = YES;
-    self.view = bgImageView;
+    //bgImageView.userInteractionEnabled = YES;
+    [self.view addSubview:bgImageView];
+    [bgImageView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.edges.offset(0);
+    }];
     
     //设置关闭按钮
     UIButton *closeBtn = [[UIButton alloc] init];

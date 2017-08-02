@@ -9,6 +9,9 @@
 #import "SUShopHeadView.h"
 #import "SULoopView.h"
 #import "SUShopDetailVC.h"
+#import "SUShopDetailAnimator.h"
+
+
 @interface SUShopHeadView ()
 //背景图片
 @property(nonatomic,weak)UIImageView *bgImageView;
@@ -20,6 +23,8 @@
 @property(nonatomic,weak)UILabel *bulletinLabel;
 //滚动视图
 @property(nonatomic,weak)SULoopView *loopView;
+//强引用转场动画
+@property(nonatomic,strong)SUShopDetailAnimator *animator;
 @end
 
 @implementation SUShopHeadView
@@ -153,8 +158,10 @@
     shopDetailVC.shopDataModel = _shopDataModel;
     //设置转场方式
     shopDetailVC.modalPresentationStyle = UIModalPresentationCustom;
-    
-    
+    //设置转场代理对象
+    _animator = [[SUShopDetailAnimator alloc] init];;
+    //设置代理
+    shopDetailVC.transitioningDelegate = _animator;
     //转场
     [vc presentViewController:shopDetailVC animated:YES completion:^{
         
