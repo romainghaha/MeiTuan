@@ -18,6 +18,8 @@
 		4F5FA6401F308D0C0026C292 /* SUDiscoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F5FA63F1F308D0C0026C292 /* SUDiscoModel.m */; };
 		4F5FA6431F30A64A0026C292 /* SULoopView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F5FA6421F30A64A0026C292 /* SULoopView.m */; };
 		4F5FA6461F30A6F70026C292 /* SUInforView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F5FA6451F30A6F70026C292 /* SUInforView.m */; };
+		4F5FA64A1F3166C20026C292 /* SUShopDetailVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F5FA6491F3166C20026C292 /* SUShopDetailVC.m */; };
+		4F5FA64D1F31865B0026C292 /* UIView+Addition.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F5FA64C1F31865B0026C292 /* UIView+Addition.m */; };
 		4F9E794B1F2DF4C600B2DA46 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F9E794A1F2DF4C600B2DA46 /* main.m */; };
 		4F9E79561F2DF4C600B2DA46 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4F9E79551F2DF4C600B2DA46 /* Assets.xcassets */; };
 		4F9E79591F2DF4C600B2DA46 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4F9E79571F2DF4C600B2DA46 /* LaunchScreen.storyboard */; };
@@ -96,6 +98,10 @@
 		4F5FA6421F30A64A0026C292 /* SULoopView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SULoopView.m; sourceTree = "<group>"; };
 		4F5FA6441F30A6F70026C292 /* SUInforView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SUInforView.h; sourceTree = "<group>"; };
 		4F5FA6451F30A6F70026C292 /* SUInforView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SUInforView.m; sourceTree = "<group>"; };
+		4F5FA6481F3166C20026C292 /* SUShopDetailVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SUShopDetailVC.h; sourceTree = "<group>"; };
+		4F5FA6491F3166C20026C292 /* SUShopDetailVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SUShopDetailVC.m; sourceTree = "<group>"; };
+		4F5FA64B1F31865B0026C292 /* UIView+Addition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Addition.h"; sourceTree = "<group>"; };
+		4F5FA64C1F31865B0026C292 /* UIView+Addition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Addition.m"; sourceTree = "<group>"; };
 		4F9E79461F2DF4C600B2DA46 /* MeiTuanPro.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MeiTuanPro.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4F9E794A1F2DF4C600B2DA46 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		4F9E79551F2DF4C600B2DA46 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -345,6 +351,15 @@
 			path = Controller;
 			sourceTree = "<group>";
 		};
+		4F5FA6471F3163E70026C292 /* ShopDetail */ = {
+			isa = PBXGroup;
+			children = (
+				4F5FA6481F3166C20026C292 /* SUShopDetailVC.h */,
+				4F5FA6491F3166C20026C292 /* SUShopDetailVC.m */,
+			);
+			path = ShopDetail;
+			sourceTree = "<group>";
+		};
 		4F9E793D1F2DF4C600B2DA46 = {
 			isa = PBXGroup;
 			children = (
@@ -405,6 +420,8 @@
 				4F9E79FE1F2E21D900B2DA46 /* additon.h */,
 				4F5FA63B1F307BB00026C292 /* UIImage+DashLine.h */,
 				4F5FA63C1F307BB00026C292 /* UIImage+DashLine.m */,
+				4F5FA64B1F31865B0026C292 /* UIView+Addition.h */,
+				4F5FA64C1F31865B0026C292 /* UIView+Addition.m */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -423,6 +440,7 @@
 			isa = PBXGroup;
 			children = (
 				4F9E79721F2DF5D700B2DA46 /* Main */,
+				4F5FA6471F3163E70026C292 /* ShopDetail */,
 				4F9E79731F2DF5D700B2DA46 /* Shop */,
 				4F5FA6151F2F5DEE0026C292 /* ShopComment */,
 				4F5FA6191F2F5DEE0026C292 /* ShopOrder */,
@@ -673,6 +691,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4F9E79E71F2DF6D600B2DA46 /* UIImageView+HighlightedWebCache.m in Sources */,
+				4F5FA64A1F3166C20026C292 /* SUShopDetailVC.m in Sources */,
 				4F9E79C81F2DF6D600B2DA46 /* AFHTTPSessionManager.m in Sources */,
 				4F9E79E11F2DF6D600B2DA46 /* SDWebImageManager.m in Sources */,
 				4F9E79DD1F2DF6D600B2DA46 /* SDWebImageCompat.m in Sources */,
@@ -687,6 +706,7 @@
 				4F9E79E61F2DF6D600B2DA46 /* UIImage+WebP.m in Sources */,
 				4F5FA62F1F2F5EBB0026C292 /* SUShopInforVC.m in Sources */,
 				4F9E79D11F2DF6D600B2DA46 /* MASLayoutConstraint.m in Sources */,
+				4F5FA64D1F31865B0026C292 /* UIView+Addition.m in Sources */,
 				4F9E79DB1F2DF6D600B2DA46 /* SDImageCache.m in Sources */,
 				4F5FA6461F30A6F70026C292 /* SUInforView.m in Sources */,
 				4F9E79E91F2DF6D600B2DA46 /* UIView+WebCache.m in Sources */,

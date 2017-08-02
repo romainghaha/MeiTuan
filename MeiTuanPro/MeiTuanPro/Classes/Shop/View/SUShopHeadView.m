@@ -8,6 +8,7 @@
 
 #import "SUShopHeadView.h"
 #import "SULoopView.h"
+#import "SUShopDetailVC.h"
 @interface SUShopHeadView ()
 //背景图片
 @property(nonatomic,weak)UIImageView *bgImageView;
@@ -132,7 +133,34 @@
     _bgImageView = bgimgView;
     _loopView = loopView;
     
+    
+    //给滚动视图添加轻敲手势
+    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(loopViewClick)];
+    //添加到loopView上
+    [loopView addGestureRecognizer:tap];
+    
+    
+    
 }
+
+-(void)loopViewClick
+{
+    //获取响应控制器
+    UIViewController *vc = [self viewController];
+    //创建转场控制器
+    SUShopDetailVC *shopDetailVC = [[SUShopDetailVC alloc] init];
+    //传入数据
+    shopDetailVC.shopDataModel = _shopDataModel;
+    //设置转场方式
+    shopDetailVC.modalPresentationStyle = UIModalPresentationCustom;
+    
+    
+    //转场
+    [vc presentViewController:shopDetailVC animated:YES completion:^{
+        
+    }];
+}
+
 -(void)setShopDataModel:(SUShopModel *)shopDataModel
 {
     _shopDataModel = shopDataModel;
@@ -150,4 +178,5 @@
     //轮播
     _loopView.dicModelData = shopDataModel.discoDataModel;
 }
+
 @end

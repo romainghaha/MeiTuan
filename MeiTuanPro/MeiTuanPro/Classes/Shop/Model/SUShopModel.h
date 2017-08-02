@@ -20,6 +20,12 @@
 @property(nonatomic,copy)NSString *bulletin;
 //轮播图片
 @property(nonatomic,strong)NSArray<SUDiscoModel *> *discoDataModel;
+//配送费
+@property(nonatomic,copy)NSString *shipping_fee_tip;
+//起送金额
+@property(nonatomic,copy)NSString *min_price;
+//配送时间
+@property(nonatomic,copy)NSString *delivery_time_tip;
 
 +(instancetype)makeShopModelWithDic:(NSDictionary *)dic;
 
