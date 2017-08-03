@@ -7,9 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
-@class SUFoodDetailCell;
+@class SUFoodDetailModel;
 @interface SUFoodDetailCell : UITableViewCell
 //传入数据
-@property(nonatomic,strong)SUFoodDetailCell *foodDetailData;
+@property(nonatomic,strong)SUFoodDetailModel *foodDetailData;
 
 @end

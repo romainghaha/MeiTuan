@@ -7,7 +7,7 @@
 //
 
 #import "SUFoodDetailCell.h"
-
+#import "SUFoodDetailModel.h"
 @interface SUFoodDetailCell ()
 //图片
 @property(nonatomic,weak)UIImageView *imgView;
@@ -44,12 +44,13 @@
     //图片
     UIImageView *imageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"img_food_loading"]];
     [self.contentView addSubview:imageView];
+    imageView.contentMode = UIViewContentModeScaleAspectFill;
+    imageView.clipsToBounds = YES;
     //约束
     [imageView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.height.width.offset(64);
         make.top.equalTo(self.contentView.mas_top).offset(8);
         make.left.equalTo(self.contentView.mas_left).offset(8);
-        
     }];
     //品名
     UILabel *foodNameLabel = [[UILabel alloc] init];
@@ -64,7 +65,7 @@
     //信息
     UILabel *foodInforLabel = [[UILabel alloc] init];
     [self.contentView addSubview:foodInforLabel];
-    foodInforLabel.text = @"萝卜青菜各有所爱,你不吃请走开";
+    foodInforLabel.text = @"萝卜青菜各有所爱,你不吃请走开萝卜青菜各有所爱,你不吃请走开萝卜青菜各有所爱,你不吃请走开";
     foodInforLabel.textColor = [UIColor darkGrayColor];
     foodInforLabel.font = [UIFont systemFontOfSize:12];
     foodInforLabel.numberOfLines = 2;
@@ -120,10 +121,23 @@
  
 }
 //重写set方法
--(void)setFoodDetailData:(SUFoodDetailCell *)foodDetailData
+-(void)setFoodDetailData:(SUFoodDetailModel *)foodDetailData
 {
     _foodDetailData = foodDetailData;
     //赋值
+    //图片
+    [_imgView sd_setImageWithURL:[NSURL URLWithString:[_foodDetailData.picture stringByDeletingPathExtension]]];
+    //名称
+    _foodNameLabel.text = foodDetailData.name;
+    //描述
+    _foodInforLabel.text = foodDetailData.desc;
+    //评价
+    _praiseLabel.text = foodDetailData.praise_content ;
+    //价格
+    _priceLabel.text = [NSString stringWithFormat:@"¥%.f",foodDetailData.min_price];
+    //月售
+    _monthSaleLabel.text = foodDetailData.month_saled_content;
+    
 }
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
     [super setSelected:selected animated:animated];

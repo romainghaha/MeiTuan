@@ -16,11 +16,11 @@
 //图片
 @property(nonatomic,copy)NSString *picture;
 //点赞
-@property(nonatomic,copy)NSString *praise_num_new;
+@property(nonatomic,copy)NSString *praise_content;
 //价格
 @property(nonatomic,assign)float min_price;
 //描述
-@property(nonatomic,assign)NSString *desc;
+@property(nonatomic,copy)NSString *desc;
 
 +(instancetype)foodDetailDataModelMakeWithDic:(NSDictionary *)dic;
 

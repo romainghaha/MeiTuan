@@ -110,7 +110,11 @@ static NSString *foodDetailCellID = @"foodDetailCellID";
         return _foodOrderModelData.count;
     }else
     {
-        return 5;
+        //取出组对应的类模型
+        SUFoodOrderDataModel *dm = _foodOrderModelData[section];
+        //取出本组中key为详细的那一模型
+        NSArray *fm = dm.foodDetailData;
+        return fm.count;
     }
 }
 //返回cell
@@ -128,6 +132,13 @@ static NSString *foodDetailCellID = @"foodDetailCellID";
     }
     //创建cell
     SUFoodDetailCell *cell = [tableView dequeueReusableCellWithIdentifier:foodDetailCellID forIndexPath:indexPath];
+    //取出组对应的类模型
+    SUFoodOrderDataModel *dm = _foodOrderModelData[indexPath.section];
+    //取出本组中key为详细的那一模型
+    NSArray *fm = dm.foodDetailData;
+    //传值
+    cell.foodDetailData = fm[indexPath.row];
+    //返回cell
     return cell;
 
 }
