@@ -21,6 +21,11 @@
 		4F5FA64A1F3166C20026C292 /* SUShopDetailVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F5FA6491F3166C20026C292 /* SUShopDetailVC.m */; };
 		4F5FA64D1F31865B0026C292 /* UIView+Addition.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F5FA64C1F31865B0026C292 /* UIView+Addition.m */; };
 		4F5FA6531F32208A0026C292 /* SUShopDetailAnimator.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F5FA6521F32208A0026C292 /* SUShopDetailAnimator.m */; };
+		4F5FA6561F33344B0026C292 /* SUFoodOrderDataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F5FA6551F33344B0026C292 /* SUFoodOrderDataModel.m */; };
+		4F5FA6591F333A3E0026C292 /* SUFoodCategoryCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F5FA6581F333A3E0026C292 /* SUFoodCategoryCell.m */; };
+		4F5FA65D1F333D170026C292 /* UIColor+Addition.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F5FA65C1F333D170026C292 /* UIColor+Addition.m */; };
+		4F5FA6601F33412E0026C292 /* SUFoodDetailModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F5FA65F1F33412E0026C292 /* SUFoodDetailModel.m */; };
+		4F5FA6641F3345480026C292 /* SUFoodDetailCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F5FA6621F3345480026C292 /* SUFoodDetailCell.m */; };
 		4F9E794B1F2DF4C600B2DA46 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F9E794A1F2DF4C600B2DA46 /* main.m */; };
 		4F9E79561F2DF4C600B2DA46 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4F9E79551F2DF4C600B2DA46 /* Assets.xcassets */; };
 		4F9E79591F2DF4C600B2DA46 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4F9E79571F2DF4C600B2DA46 /* LaunchScreen.storyboard */; };
@@ -105,6 +110,16 @@
 		4F5FA64C1F31865B0026C292 /* UIView+Addition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Addition.m"; sourceTree = "<group>"; };
 		4F5FA6511F32208A0026C292 /* SUShopDetailAnimator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SUShopDetailAnimator.h; sourceTree = "<group>"; };
 		4F5FA6521F32208A0026C292 /* SUShopDetailAnimator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SUShopDetailAnimator.m; sourceTree = "<group>"; };
+		4F5FA6541F33344B0026C292 /* SUFoodOrderDataModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SUFoodOrderDataModel.h; sourceTree = "<group>"; };
+		4F5FA6551F33344B0026C292 /* SUFoodOrderDataModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SUFoodOrderDataModel.m; sourceTree = "<group>"; };
+		4F5FA6571F333A3E0026C292 /* SUFoodCategoryCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SUFoodCategoryCell.h; sourceTree = "<group>"; };
+		4F5FA6581F333A3E0026C292 /* SUFoodCategoryCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SUFoodCategoryCell.m; sourceTree = "<group>"; };
+		4F5FA65B1F333D170026C292 /* UIColor+Addition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+Addition.h"; sourceTree = "<group>"; };
+		4F5FA65C1F333D170026C292 /* UIColor+Addition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Addition.m"; sourceTree = "<group>"; };
+		4F5FA65E1F33412E0026C292 /* SUFoodDetailModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SUFoodDetailModel.h; sourceTree = "<group>"; };
+		4F5FA65F1F33412E0026C292 /* SUFoodDetailModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SUFoodDetailModel.m; sourceTree = "<group>"; };
+		4F5FA6611F3345480026C292 /* SUFoodDetailCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SUFoodDetailCell.h; sourceTree = "<group>"; };
+		4F5FA6621F3345480026C292 /* SUFoodDetailCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SUFoodDetailCell.m; sourceTree = "<group>"; };
 		4F9E79461F2DF4C600B2DA46 /* MeiTuanPro.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MeiTuanPro.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4F9E794A1F2DF4C600B2DA46 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		4F9E79551F2DF4C600B2DA46 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -277,6 +292,10 @@
 		4F5FA61B1F2F5DEE0026C292 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				4F5FA6541F33344B0026C292 /* SUFoodOrderDataModel.h */,
+				4F5FA6551F33344B0026C292 /* SUFoodOrderDataModel.m */,
+				4F5FA65E1F33412E0026C292 /* SUFoodDetailModel.h */,
+				4F5FA65F1F33412E0026C292 /* SUFoodDetailModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -284,6 +303,10 @@
 		4F5FA61C1F2F5DEE0026C292 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				4F5FA6571F333A3E0026C292 /* SUFoodCategoryCell.h */,
+				4F5FA6581F333A3E0026C292 /* SUFoodCategoryCell.m */,
+				4F5FA6611F3345480026C292 /* SUFoodDetailCell.h */,
+				4F5FA6621F3345480026C292 /* SUFoodDetailCell.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -365,6 +388,15 @@
 			path = ShopDetail;
 			sourceTree = "<group>";
 		};
+		4F5FA65A1F333D170026C292 /* 十六进制设置颜色 */ = {
+			isa = PBXGroup;
+			children = (
+				4F5FA65B1F333D170026C292 /* UIColor+Addition.h */,
+				4F5FA65C1F333D170026C292 /* UIColor+Addition.m */,
+			);
+			path = "十六进制设置颜色";
+			sourceTree = "<group>";
+		};
 		4F9E793D1F2DF4C600B2DA46 = {
 			isa = PBXGroup;
 			children = (
@@ -420,6 +452,7 @@
 		4F9E796E1F2DF5D700B2DA46 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				4F5FA65A1F333D170026C292 /* 十六进制设置颜色 */,
 				4F9E79FB1F2E1B6C00B2DA46 /* NSObject+SULinearFunction.h */,
 				4F9E79FC1F2E1B6C00B2DA46 /* NSObject+SULinearFunction.m */,
 				4F9E79FE1F2E21D900B2DA46 /* additon.h */,
@@ -716,6 +749,7 @@
 				4F5FA6461F30A6F70026C292 /* SUInforView.m in Sources */,
 				4F5FA6531F32208A0026C292 /* SUShopDetailAnimator.m in Sources */,
 				4F9E79E91F2DF6D600B2DA46 /* UIView+WebCache.m in Sources */,
+				4F5FA6591F333A3E0026C292 /* SUFoodCategoryCell.m in Sources */,
 				4F5FA63D1F307BB00026C292 /* UIImage+DashLine.m in Sources */,
 				4F5FA62C1F2F5E9C0026C292 /* SUShopOrdVC.m in Sources */,
 				4F9E79CF1F2DF6D600B2DA46 /* MASConstraint.m in Sources */,
@@ -723,6 +757,7 @@
 				4F9E79E41F2DF6D600B2DA46 /* UIImage+GIF.m in Sources */,
 				4F5FA6351F3072B70026C292 /* SUShopModel.m in Sources */,
 				4F9E79DA1F2DF6D600B2DA46 /* NSImage+WebCache.m in Sources */,
+				4F5FA6561F33344B0026C292 /* SUFoodOrderDataModel.m in Sources */,
 				4F9E79D51F2DF6D600B2DA46 /* NSLayoutConstraint+MASDebugAdditions.m in Sources */,
 				4F9E79E51F2DF6D600B2DA46 /* UIImage+MultiFormat.m in Sources */,
 				4F9E79DE1F2DF6D600B2DA46 /* SDWebImageDecoder.m in Sources */,
@@ -732,6 +767,8 @@
 				4F9E79E01F2DF6D600B2DA46 /* SDWebImageDownloaderOperation.m in Sources */,
 				4F9E79CB1F2DF6D600B2DA46 /* AFURLRequestSerialization.m in Sources */,
 				4F5FA6431F30A64A0026C292 /* SULoopView.m in Sources */,
+				4F5FA65D1F333D170026C292 /* UIColor+Addition.m in Sources */,
+				4F5FA6601F33412E0026C292 /* SUFoodDetailModel.m in Sources */,
 				4F9E79DC1F2DF6D600B2DA46 /* SDImageCacheConfig.m in Sources */,
 				4F5FA6321F3069C40026C292 /* SUShopHeadView.m in Sources */,
 				4F5FA6261F2F5E140026C292 /* SUShopVC.m in Sources */,
@@ -746,6 +783,7 @@
 				4F9E79D31F2DF6D600B2DA46 /* MASViewConstraint.m in Sources */,
 				4F9E79E81F2DF6D600B2DA46 /* UIImageView+WebCache.m in Sources */,
 				4F9E79EA1F2DF6D600B2DA46 /* UIView+WebCacheOperation.m in Sources */,
+				4F5FA6641F3345480026C292 /* SUFoodDetailCell.m in Sources */,
 				4F9E79771F2DF5D700B2DA46 /* AppDelegate.m in Sources */,
 				4F5FA6291F2F5E7F0026C292 /* SUShopComVC.m in Sources */,
 				4F9E79D21F2DF6D600B2DA46 /* MASViewAttribute.m in Sources */,
