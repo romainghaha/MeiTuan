@@ -34,11 +34,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     self.view.backgroundColor = [UIColor orangeColor];
-    
-    
     [self setUpUI];
-    
-    
 }
 
 //界面搭建
@@ -167,10 +163,6 @@
         make.top.equalTo(discountLabel.mas_bottom).offset(10);
         make.height.offset(_shopDataModel.discoDataModel.count*30);
     }];
-    
-    
-    
-    
     //公告信息
     UILabel *bulletinLabel = [[UILabel alloc] init];
     [contentView addSubview:bulletinLabel];

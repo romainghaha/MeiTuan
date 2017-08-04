@@ -26,6 +26,7 @@
 		4F5FA65D1F333D170026C292 /* UIColor+Addition.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F5FA65C1F333D170026C292 /* UIColor+Addition.m */; };
 		4F5FA6601F33412E0026C292 /* SUFoodDetailModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F5FA65F1F33412E0026C292 /* SUFoodDetailModel.m */; };
 		4F5FA6641F3345480026C292 /* SUFoodDetailCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F5FA6621F3345480026C292 /* SUFoodDetailCell.m */; };
+		4F5FA6681F343BB40026C292 /* SUFooddetailHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F5FA6671F343BB40026C292 /* SUFooddetailHeaderView.m */; };
 		4F9E794B1F2DF4C600B2DA46 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F9E794A1F2DF4C600B2DA46 /* main.m */; };
 		4F9E79561F2DF4C600B2DA46 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4F9E79551F2DF4C600B2DA46 /* Assets.xcassets */; };
 		4F9E79591F2DF4C600B2DA46 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4F9E79571F2DF4C600B2DA46 /* LaunchScreen.storyboard */; };
@@ -120,6 +121,8 @@
 		4F5FA65F1F33412E0026C292 /* SUFoodDetailModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SUFoodDetailModel.m; sourceTree = "<group>"; };
 		4F5FA6611F3345480026C292 /* SUFoodDetailCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SUFoodDetailCell.h; sourceTree = "<group>"; };
 		4F5FA6621F3345480026C292 /* SUFoodDetailCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SUFoodDetailCell.m; sourceTree = "<group>"; };
+		4F5FA6661F343BB40026C292 /* SUFooddetailHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SUFooddetailHeaderView.h; sourceTree = "<group>"; };
+		4F5FA6671F343BB40026C292 /* SUFooddetailHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SUFooddetailHeaderView.m; sourceTree = "<group>"; };
 		4F9E79461F2DF4C600B2DA46 /* MeiTuanPro.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MeiTuanPro.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4F9E794A1F2DF4C600B2DA46 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		4F9E79551F2DF4C600B2DA46 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -307,6 +310,8 @@
 				4F5FA6581F333A3E0026C292 /* SUFoodCategoryCell.m */,
 				4F5FA6611F3345480026C292 /* SUFoodDetailCell.h */,
 				4F5FA6621F3345480026C292 /* SUFoodDetailCell.m */,
+				4F5FA6661F343BB40026C292 /* SUFooddetailHeaderView.h */,
+				4F5FA6671F343BB40026C292 /* SUFooddetailHeaderView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -762,6 +767,7 @@
 				4F9E79E51F2DF6D600B2DA46 /* UIImage+MultiFormat.m in Sources */,
 				4F9E79DE1F2DF6D600B2DA46 /* SDWebImageDecoder.m in Sources */,
 				4F5FA6401F308D0C0026C292 /* SUDiscoModel.m in Sources */,
+				4F5FA6681F343BB40026C292 /* SUFooddetailHeaderView.m in Sources */,
 				4F9E79CE1F2DF6D600B2DA46 /* MASCompositeConstraint.m in Sources */,
 				4F9E79D91F2DF6D600B2DA46 /* NSData+ImageContentType.m in Sources */,
 				4F9E79E01F2DF6D600B2DA46 /* SDWebImageDownloaderOperation.m in Sources */,

@@ -10,6 +10,7 @@
 #import "SUFoodOrderDataModel.h"
 #import "SUFoodCategoryCell.h"
 #import "SUFoodDetailCell.h"
+#import "SUFooddetailHeaderView.h"
 
 @interface SUShopOrdVC ()<UITableViewDelegate,UITableViewDataSource>
 
@@ -18,13 +19,17 @@
 //商品详细表格
 @property(nonatomic,weak)UITableView *foodDetail;
 //商品数据保存
-@property(nonatomic,strong)NSArray *foodOrderModelData;
+@property(nonatomic,strong)NSArray<SUFoodOrderDataModel*> *foodOrderModelData;
+//记录类别表格是不是手动选中
+@property(nonatomic,assign)BOOL foodTypeClick;
 
 @end
 
 //cell复用标识
 static NSString *foodTypeCellID = @"foodTypeCellID";
 static NSString *foodDetailCellID = @"foodDetailCellID";
+//组头复用标识
+static NSString *foodDetailViewID = @"foodDetailViewID";
 
 @implementation SUShopOrdVC
 
@@ -63,6 +68,9 @@ static NSString *foodDetailCellID = @"foodDetailCellID";
     foodType.delegate = self;
     //给属性赋值
     _foodType = foodType;
+    //默认选中第一行
+    NSIndexPath *index = [NSIndexPath indexPathForRow:0 inSection:0];
+    [foodType selectRowAtIndexPath:index animated:NO scrollPosition:UITableViewScrollPositionNone];
     
     
     //商品详细
@@ -81,6 +89,9 @@ static NSString *foodDetailCellID = @"foodDetailCellID";
     
     [foodDetail registerClass:[SUFoodDetailCell class] forCellReuseIdentifier:foodDetailCellID];
     //[foodDetail registerNib:[UINib nibWithNibName:@"SUFoodDetailCell" bundle:nil] forCellReuseIdentifier:foodDetailCellID];
+    //注册组头
+    [foodDetail registerClass:[SUFooddetailHeaderView class] forHeaderFooterViewReuseIdentifier:foodDetailViewID];
+    foodDetail.sectionHeaderHeight = 30;
     
     //代理数据源
     foodDetail.delegate = self;
@@ -90,6 +101,44 @@ static NSString *foodDetailCellID = @"foodDetailCellID";
     //设置预估行高
     foodDetail.estimatedRowHeight = 150;
     //foodDetail.rowHeight = 150;
+}
+
+//取消选中
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    if(tableView == _foodDetail)
+    {
+        //取消选中
+        [tableView deselectRowAtIndexPath:indexPath animated:NO];
+//        //获取索引
+//        NSIndexPath *index = [NSIndexPath indexPathForRow:indexPath.section inSection:0];
+//        //选中
+//        [_foodType selectRowAtIndexPath:index animated:YES scrollPosition:UITableViewScrollPositionMiddle];
+    }
+    if(tableView == _foodType)
+    {
+        //索引选中
+        _foodTypeClick = YES;
+        //获取索引
+        NSIndexPath *index = [NSIndexPath indexPathForRow:0 inSection:indexPath.row];
+        //滚动
+        [_foodDetail scrollToRowAtIndexPath:index atScrollPosition:UITableViewScrollPositionTop animated:YES];
+    }
+}
+//商品详细在滚动
+-(void)scrollViewDidScroll:(UIScrollView *)scrollView
+{
+    if(_foodDetail == scrollView && _foodTypeClick == NO)
+    {
+        NSIndexPath *indexPath = [[_foodDetail indexPathsForVisibleRows] firstObject];
+        NSIndexPath *index = [NSIndexPath indexPathForRow:indexPath.section inSection:0];
+        //选中
+        [_foodType selectRowAtIndexPath:index animated:YES scrollPosition:UITableViewScrollPositionMiddle];
+    }
+}
+-(void)scrollViewDidEndScrollingAnimation:(UIScrollView *)scrollView
+{
+    _foodTypeClick = NO;
 }
 //返回组数
 -(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
@@ -142,7 +191,16 @@ static NSString *foodDetailCellID = @"foodDetailCellID";
     return cell;
 
 }
-
+//组头
+-(UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
+{
+    //创建组头视图
+    SUFooddetailHeaderView *headView = [tableView dequeueReusableHeaderFooterViewWithIdentifier:foodDetailViewID];
+    //传值
+    headView.foodOrderData = _foodOrderModelData[section];
+    //返回
+    return headView;
+}
 -(void)loadFoodOrderData
 {
     //加载json
@@ -163,19 +221,13 @@ static NSString *foodDetailCellID = @"foodDetailCellID";
     _foodOrderModelData = arrM.copy;
 }
 
+
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
 
-/*
-#pragma mark - Navigation
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end
