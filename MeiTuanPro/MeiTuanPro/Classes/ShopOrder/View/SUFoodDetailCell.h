@@ -12,4 +12,5 @@
 //传入数据
 @property(nonatomic,strong)SUFoodDetailModel *foodDetailData;
 
+
 @end

@@ -21,6 +21,8 @@
 @property(nonatomic,assign)float min_price;
 //描述
 @property(nonatomic,copy)NSString *desc;
+//记录点餐数量
+@property(nonatomic,assign)NSInteger orderNum;
 
 +(instancetype)foodDetailDataModelMakeWithDic:(NSDictionary *)dic;
 

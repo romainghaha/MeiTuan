@@ -21,6 +21,14 @@
 @property(nonatomic,weak)UILabel *praiseLabel;
 //单价
 @property(nonatomic,weak)UILabel *priceLabel;
+//添加按钮
+@property(nonatomic,weak)UIButton *addBtn;
+//减少按钮
+@property(nonatomic,weak)UIButton *reduceBtn;
+//点餐数量
+@property(nonatomic,weak)UILabel *numLabel;
+
+
 @end
 
 @implementation SUFoodDetailCell
@@ -110,7 +118,47 @@
         make.bottom.equalTo(self.contentView.mas_bottom).offset(-8);
     }];
     
-    
+    //点餐模块
+    UIView *addView = [[UIView alloc] init];
+    //addView.backgroundColor = [UIColor grayColor];
+    [self.contentView addSubview:addView];
+    //约束
+    [addView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.right.equalTo(self.contentView.mas_right).offset(-8);
+        make.bottom.equalTo(self.contentView.mas_bottom).offset(-8);
+        make.height.offset(27);
+        make.width.offset(90);
+    }];
+    //添加按钮
+    UIButton *addBtn = [[UIButton alloc] init];
+    [addView addSubview:addBtn];
+    [addBtn setImage:[UIImage imageNamed:@"icon_food_increase"] forState:UIControlStateNormal];
+    [addBtn addTarget:self action:@selector(addBtnClick) forControlEvents:UIControlEventTouchUpInside];
+    //约束
+    [addBtn mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.right.bottom.top.offset(0);
+    }];
+    //减少按钮
+    UIButton *reduceBtn = [[UIButton alloc] init];
+    [addView addSubview:reduceBtn];
+    [reduceBtn setImage:[UIImage imageNamed:@"icon_food_decrease"] forState:UIControlStateNormal];
+    [reduceBtn addTarget:self action:@selector(reduceBtnClick) forControlEvents:UIControlEventTouchUpInside];
+    //reduceBtn.hidden = YES;
+    //约束
+    [reduceBtn mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.top.bottom.offset(0);
+    }];
+    //点餐数量
+    UILabel *numLabel = [[UILabel alloc] init];
+    [addView addSubview:numLabel];
+    //numLabel.hidden = YES;
+    numLabel.textAlignment = NSTextAlignmentCenter;
+    numLabel.textColor = [UIColor orangeColor];
+    //约束
+    [numLabel mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.centerX.equalTo(addView).offset(0);
+        make.centerY.equalTo(addView).offset(0);
+    }];
     //
     _imgView = imageView;
     _foodNameLabel = foodNameLabel;
@@ -118,7 +166,30 @@
     _praiseLabel = praiseLabel;
     _priceLabel = priceLabel;
     _monthSaleLabel = monthSaleLabel;
+    _addBtn = addBtn;
+    _reduceBtn = reduceBtn;
+    _numLabel = numLabel;
  
+}
+-(void)addBtnClick
+{
+    _reduceBtn.hidden = NO;
+    _numLabel.hidden = NO;
+    (_foodDetailData.orderNum)++;
+    _numLabel.text = @(_foodDetailData.orderNum).description;
+}
+-(void)reduceBtnClick
+{
+    if((_foodDetailData.orderNum) != 0)
+    {
+        (_foodDetailData.orderNum)--;
+        _numLabel.text = @(_foodDetailData.orderNum).description;
+    }
+    if ((_foodDetailData.orderNum) == 0)
+    {
+        _reduceBtn.hidden = YES;
+        _numLabel.hidden = YES;
+    }
 }
 //重写set方法
 -(void)setFoodDetailData:(SUFoodDetailModel *)foodDetailData
@@ -137,6 +208,17 @@
     _priceLabel.text = [NSString stringWithFormat:@"¥%.f",foodDetailData.min_price];
     //月售
     _monthSaleLabel.text = foodDetailData.month_saled_content;
+    //点餐数量
+    _numLabel.text = @(foodDetailData.orderNum).description;
+    if((_foodDetailData.orderNum) == 0)
+    {
+        _numLabel.hidden = YES;
+        _reduceBtn.hidden = YES;
+    }else
+    {
+        _numLabel.hidden = NO;
+        _reduceBtn.hidden = NO;
+    }
     
 }
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
