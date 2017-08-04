@@ -17,6 +17,10 @@
 @property(nonatomic,copy)NSString *picture;
 //点赞
 @property(nonatomic,copy)NSString *praise_content;
+//点赞数
+@property(nonatomic,assign)float praise_num;
+//差评数
+@property(nonatomic,assign)float tread_num;
 //价格
 @property(nonatomic,assign)float min_price;
 //描述

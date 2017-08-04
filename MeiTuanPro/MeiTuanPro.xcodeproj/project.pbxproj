@@ -28,6 +28,8 @@
 		4F5FA6641F3345480026C292 /* SUFoodDetailCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F5FA6621F3345480026C292 /* SUFoodDetailCell.m */; };
 		4F5FA6681F343BB40026C292 /* SUFooddetailHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F5FA6671F343BB40026C292 /* SUFooddetailHeaderView.m */; };
 		4F5FA66E1F3458B80026C292 /* SUFooDVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F5FA66B1F3458B80026C292 /* SUFooDVC.m */; };
+		4F5FA6711F3459860026C292 /* SUFoodDetailCollCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F5FA6701F3459860026C292 /* SUFoodDetailCollCell.m */; };
+		4F5FA6741F3459A50026C292 /* SUFoodDetailFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F5FA6731F3459A50026C292 /* SUFoodDetailFlowLayout.m */; };
 		4F9E794B1F2DF4C600B2DA46 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F9E794A1F2DF4C600B2DA46 /* main.m */; };
 		4F9E79561F2DF4C600B2DA46 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4F9E79551F2DF4C600B2DA46 /* Assets.xcassets */; };
 		4F9E79591F2DF4C600B2DA46 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4F9E79571F2DF4C600B2DA46 /* LaunchScreen.storyboard */; };
@@ -125,6 +127,10 @@
 		4F5FA6671F343BB40026C292 /* SUFooddetailHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SUFooddetailHeaderView.m; sourceTree = "<group>"; };
 		4F5FA66A1F3458B80026C292 /* SUFooDVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SUFooDVC.h; sourceTree = "<group>"; };
 		4F5FA66B1F3458B80026C292 /* SUFooDVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SUFooDVC.m; sourceTree = "<group>"; };
+		4F5FA66F1F3459860026C292 /* SUFoodDetailCollCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SUFoodDetailCollCell.h; sourceTree = "<group>"; };
+		4F5FA6701F3459860026C292 /* SUFoodDetailCollCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SUFoodDetailCollCell.m; sourceTree = "<group>"; };
+		4F5FA6721F3459A50026C292 /* SUFoodDetailFlowLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SUFoodDetailFlowLayout.h; sourceTree = "<group>"; };
+		4F5FA6731F3459A50026C292 /* SUFoodDetailFlowLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SUFoodDetailFlowLayout.m; sourceTree = "<group>"; };
 		4F9E79461F2DF4C600B2DA46 /* MeiTuanPro.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MeiTuanPro.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4F9E794A1F2DF4C600B2DA46 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		4F9E79551F2DF4C600B2DA46 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -421,6 +427,10 @@
 		4F5FA66D1F3458B80026C292 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				4F5FA66F1F3459860026C292 /* SUFoodDetailCollCell.h */,
+				4F5FA6701F3459860026C292 /* SUFoodDetailCollCell.m */,
+				4F5FA6721F3459A50026C292 /* SUFoodDetailFlowLayout.h */,
+				4F5FA6731F3459A50026C292 /* SUFoodDetailFlowLayout.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -775,6 +785,7 @@
 				4F5FA64D1F31865B0026C292 /* UIView+Addition.m in Sources */,
 				4F9E79DB1F2DF6D600B2DA46 /* SDImageCache.m in Sources */,
 				4F5FA6461F30A6F70026C292 /* SUInforView.m in Sources */,
+				4F5FA6711F3459860026C292 /* SUFoodDetailCollCell.m in Sources */,
 				4F5FA6531F32208A0026C292 /* SUShopDetailAnimator.m in Sources */,
 				4F9E79E91F2DF6D600B2DA46 /* UIView+WebCache.m in Sources */,
 				4F5FA6591F333A3E0026C292 /* SUFoodCategoryCell.m in Sources */,
@@ -788,6 +799,7 @@
 				4F5FA6561F33344B0026C292 /* SUFoodOrderDataModel.m in Sources */,
 				4F9E79D51F2DF6D600B2DA46 /* NSLayoutConstraint+MASDebugAdditions.m in Sources */,
 				4F9E79E51F2DF6D600B2DA46 /* UIImage+MultiFormat.m in Sources */,
+				4F5FA6741F3459A50026C292 /* SUFoodDetailFlowLayout.m in Sources */,
 				4F9E79DE1F2DF6D600B2DA46 /* SDWebImageDecoder.m in Sources */,
 				4F5FA6401F308D0C0026C292 /* SUDiscoModel.m in Sources */,
 				4F5FA6681F343BB40026C292 /* SUFooddetailHeaderView.m in Sources */,
