@@ -8,7 +8,7 @@
 
 #import "SUFoodDetailCollCell.h"
 #import "SUFoodDetailModel.h"
-@interface SUFoodDetailCollCell ()
+@interface SUFoodDetailCollCell ()<UIScrollViewDelegate>
 //图片
 @property(nonatomic,weak)UIImageView *foodImage;
 //商品名
@@ -48,6 +48,10 @@
     UIScrollView *scrollView = [[UIScrollView alloc] init];
     //scrollView.backgroundColor = [UIColor purpleColor];
     [self.contentView addSubview:scrollView];
+    scrollView.bounces = YES;
+    //代理
+    scrollView.delegate = self;
+    scrollView.contentSize = CGSizeMake([UIScreen mainScreen].bounds.size.width, 1000);
     //约束
     [scrollView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.edges.offset(0);
@@ -201,8 +205,36 @@
     _monthSale.text = foodDetailData.month_saled_content;
     _salePrice.text = [NSString stringWithFormat:@"¥%@",@(foodDetailData.min_price).description];
     _shopContent.text = foodDetailData.desc;
-    _praiseLabel.text = [NSString stringWithFormat:@"%.f%%",100*(foodDetailData.praise_num/(foodDetailData.tread_num + foodDetailData.praise_num))];
+    
+    float num = 0;
+    if(foodDetailData.praise_num)
+    {
+        num = (foodDetailData.praise_num/(foodDetailData.tread_num + foodDetailData.praise_num));
+    }
+    
+    _praiseLabel.text = [NSString stringWithFormat:@"%.f%%",100*num];
     //(foodDetailData.praise_num/(foodDetailData.tread_num + foodDetailData.praise_num));
     [_foodImage sd_setImageWithURL:[NSURL URLWithString:[foodDetailData.picture stringByDeletingPathExtension]]];
+    _progressView.progress = num;
 }
+
+-(void)scrollViewDidScroll:(UIScrollView *)scrollView
+{
+    //获取垂直滚动的距离
+    CGFloat y = scrollView.contentOffset.y;
+    //只有下拉时才会方法
+    if(y < 0)
+    {
+        CGFloat scale = [self linearFunctionWith:y andConsulttOne:CGPointMake(0, 1) andConsultTwo:CGPointMake(-300, 2)];
+        CGAffineTransform transform = CGAffineTransformIdentity;
+        transform  = CGAffineTransformTranslate(transform, 0, y*0.5);
+        transform = CGAffineTransformScale(transform, scale, scale);
+        _foodImage.transform = transform;
+    }else
+    {
+        _foodImage.transform = CGAffineTransformIdentity;
+    }
+    
+}
+
 @end
