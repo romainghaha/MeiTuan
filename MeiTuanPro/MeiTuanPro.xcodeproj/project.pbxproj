@@ -27,6 +27,7 @@
 		4F5FA6601F33412E0026C292 /* SUFoodDetailModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F5FA65F1F33412E0026C292 /* SUFoodDetailModel.m */; };
 		4F5FA6641F3345480026C292 /* SUFoodDetailCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F5FA6621F3345480026C292 /* SUFoodDetailCell.m */; };
 		4F5FA6681F343BB40026C292 /* SUFooddetailHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F5FA6671F343BB40026C292 /* SUFooddetailHeaderView.m */; };
+		4F5FA66E1F3458B80026C292 /* SUFooDVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F5FA66B1F3458B80026C292 /* SUFooDVC.m */; };
 		4F9E794B1F2DF4C600B2DA46 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F9E794A1F2DF4C600B2DA46 /* main.m */; };
 		4F9E79561F2DF4C600B2DA46 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4F9E79551F2DF4C600B2DA46 /* Assets.xcassets */; };
 		4F9E79591F2DF4C600B2DA46 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4F9E79571F2DF4C600B2DA46 /* LaunchScreen.storyboard */; };
@@ -69,7 +70,6 @@
 		4F9E79EA1F2DF6D600B2DA46 /* UIView+WebCacheOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F9E79C71F2DF6D600B2DA46 /* UIView+WebCacheOperation.m */; };
 		4F9E79EE1F2DF91800B2DA46 /* SUMTRootVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F9E79ED1F2DF91800B2DA46 /* SUMTRootVC.m */; };
 		4F9E79F41F2DFAED00B2DA46 /* SUBaseVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F9E79F31F2DFAED00B2DA46 /* SUBaseVC.m */; };
-		4F9E79F71F2DFF0600B2DA46 /* SUFooDVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F9E79F61F2DFF0600B2DA46 /* SUFooDVC.m */; };
 		4F9E79FD1F2E1B6C00B2DA46 /* NSObject+SULinearFunction.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F9E79FC1F2E1B6C00B2DA46 /* NSObject+SULinearFunction.m */; };
 /* End PBXBuildFile section */
 
@@ -123,6 +123,8 @@
 		4F5FA6621F3345480026C292 /* SUFoodDetailCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SUFoodDetailCell.m; sourceTree = "<group>"; };
 		4F5FA6661F343BB40026C292 /* SUFooddetailHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SUFooddetailHeaderView.h; sourceTree = "<group>"; };
 		4F5FA6671F343BB40026C292 /* SUFooddetailHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SUFooddetailHeaderView.m; sourceTree = "<group>"; };
+		4F5FA66A1F3458B80026C292 /* SUFooDVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SUFooDVC.h; sourceTree = "<group>"; };
+		4F5FA66B1F3458B80026C292 /* SUFooDVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SUFooDVC.m; sourceTree = "<group>"; };
 		4F9E79461F2DF4C600B2DA46 /* MeiTuanPro.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MeiTuanPro.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4F9E794A1F2DF4C600B2DA46 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		4F9E79551F2DF4C600B2DA46 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -215,8 +217,6 @@
 		4F9E79ED1F2DF91800B2DA46 /* SUMTRootVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SUMTRootVC.m; sourceTree = "<group>"; };
 		4F9E79F21F2DFAED00B2DA46 /* SUBaseVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SUBaseVC.h; sourceTree = "<group>"; };
 		4F9E79F31F2DFAED00B2DA46 /* SUBaseVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SUBaseVC.m; sourceTree = "<group>"; };
-		4F9E79F51F2DFF0600B2DA46 /* SUFooDVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SUFooDVC.h; sourceTree = "<group>"; };
-		4F9E79F61F2DFF0600B2DA46 /* SUFooDVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SUFooDVC.m; sourceTree = "<group>"; };
 		4F9E79FB1F2E1B6C00B2DA46 /* NSObject+SULinearFunction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+SULinearFunction.h"; sourceTree = "<group>"; };
 		4F9E79FC1F2E1B6C00B2DA46 /* NSObject+SULinearFunction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+SULinearFunction.m"; sourceTree = "<group>"; };
 		4F9E79FE1F2E21D900B2DA46 /* additon.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = additon.h; sourceTree = "<group>"; };
@@ -402,6 +402,29 @@
 			path = "十六进制设置颜色";
 			sourceTree = "<group>";
 		};
+		4F5FA6691F3458B80026C292 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				4F5FA66A1F3458B80026C292 /* SUFooDVC.h */,
+				4F5FA66B1F3458B80026C292 /* SUFooDVC.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		4F5FA66C1F3458B80026C292 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		4F5FA66D1F3458B80026C292 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		4F9E793D1F2DF4C600B2DA46 = {
 			isa = PBXGroup;
 			children = (
@@ -482,13 +505,13 @@
 		4F9E79701F2DF5D700B2DA46 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				4F9E79711F2DF5D700B2DA46 /* FoodDetail */,
 				4F9E79721F2DF5D700B2DA46 /* Main */,
 				4F5FA6471F3163E70026C292 /* ShopDetail */,
 				4F9E79731F2DF5D700B2DA46 /* Shop */,
 				4F5FA6151F2F5DEE0026C292 /* ShopComment */,
 				4F5FA6191F2F5DEE0026C292 /* ShopOrder */,
 				4F5FA61D1F2F5DEE0026C292 /* ShopInfor */,
-				4F9E79711F2DF5D700B2DA46 /* FoodDetail */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -496,8 +519,9 @@
 		4F9E79711F2DF5D700B2DA46 /* FoodDetail */ = {
 			isa = PBXGroup;
 			children = (
-				4F9E79F51F2DFF0600B2DA46 /* SUFooDVC.h */,
-				4F9E79F61F2DFF0600B2DA46 /* SUFooDVC.m */,
+				4F5FA6691F3458B80026C292 /* Controller */,
+				4F5FA66C1F3458B80026C292 /* Model */,
+				4F5FA66D1F3458B80026C292 /* View */,
 			);
 			path = FoodDetail;
 			sourceTree = "<group>";
@@ -741,7 +765,6 @@
 				4F9E79E21F2DF6D600B2DA46 /* SDWebImagePrefetcher.m in Sources */,
 				4F9E79CD1F2DF6D600B2DA46 /* AFURLSessionManager.m in Sources */,
 				4F9E79D41F2DF6D600B2DA46 /* NSArray+MASAdditions.m in Sources */,
-				4F9E79F71F2DFF0600B2DA46 /* SUFooDVC.m in Sources */,
 				4F9E79CA1F2DF6D600B2DA46 /* AFSecurityPolicy.m in Sources */,
 				4F9E79E31F2DF6D600B2DA46 /* UIButton+WebCache.m in Sources */,
 				4F9E794B1F2DF4C600B2DA46 /* main.m in Sources */,
@@ -777,6 +800,7 @@
 				4F5FA6601F33412E0026C292 /* SUFoodDetailModel.m in Sources */,
 				4F9E79DC1F2DF6D600B2DA46 /* SDImageCacheConfig.m in Sources */,
 				4F5FA6321F3069C40026C292 /* SUShopHeadView.m in Sources */,
+				4F5FA66E1F3458B80026C292 /* SUFooDVC.m in Sources */,
 				4F5FA6261F2F5E140026C292 /* SUShopVC.m in Sources */,
 				4F9E79C91F2DF6D600B2DA46 /* AFNetworkReachabilityManager.m in Sources */,
 				4F9E79FD1F2E1B6C00B2DA46 /* NSObject+SULinearFunction.m in Sources */,

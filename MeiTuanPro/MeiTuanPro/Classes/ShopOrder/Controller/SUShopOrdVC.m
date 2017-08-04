@@ -11,7 +11,7 @@
 #import "SUFoodCategoryCell.h"
 #import "SUFoodDetailCell.h"
 #import "SUFooddetailHeaderView.h"
-
+#import "SUFooDVC.h"
 @interface SUShopOrdVC ()<UITableViewDelegate,UITableViewDataSource>
 
 //商品类型表格
@@ -110,10 +110,14 @@ static NSString *foodDetailViewID = @"foodDetailViewID";
     {
         //取消选中
         [tableView deselectRowAtIndexPath:indexPath animated:NO];
-//        //获取索引
-//        NSIndexPath *index = [NSIndexPath indexPathForRow:indexPath.section inSection:0];
-//        //选中
-//        [_foodType selectRowAtIndexPath:index animated:YES scrollPosition:UITableViewScrollPositionMiddle];
+        //创建跳转的界面
+        SUFooDVC *fDVC = [[SUFooDVC alloc] init];
+        //传入数据
+        fDVC.foodOrderData = _foodOrderModelData;
+        //传入索引
+        fDVC.indexPath = indexPath;
+        //跳转界面
+        [self.navigationController pushViewController:fDVC animated:YES];
     }
     if(tableView == _foodType)
     {
