@@ -48,10 +48,10 @@
     UIScrollView *scrollView = [[UIScrollView alloc] init];
     //scrollView.backgroundColor = [UIColor purpleColor];
     [self.contentView addSubview:scrollView];
-    scrollView.bounces = YES;
+    //scrollView.bounces = YES;
     //代理
     scrollView.delegate = self;
-    scrollView.contentSize = CGSizeMake([UIScreen mainScreen].bounds.size.width, 1000);
+    scrollView.contentSize = CGSizeMake([UIScreen mainScreen].bounds.size.width, [UIScreen mainScreen].bounds.size.height+1);
     //约束
     [scrollView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.edges.offset(0);
@@ -63,7 +63,7 @@
     //约束
     [mainView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.width.offset([UIScreen mainScreen].bounds.size.width);
-        make.height.offset(1000);
+        make.height.offset([UIScreen mainScreen].bounds.size.height);
     }];
     //产品图片
     UIImageView *foodImage = [[UIImageView alloc] init];

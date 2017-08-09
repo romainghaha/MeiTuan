@@ -18,7 +18,8 @@ static NSString *foodDetailColCellID = @"foodDetailColCellID";
 
 - (void)viewDidLoad {
     
-    
+    self.imageView.alpha= 0;
+    self.navBar.tintColor = [UIColor whiteColor];
     [self setUpUI];
     
     
